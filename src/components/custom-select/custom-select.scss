@@ -1,0 +1,49 @@
+@use "../../assets/styles/colors" as *;
+@use "sass:color";
+
+.custom-select {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid $white_opaque_medium;
+  color: $text_secondary;
+  min-width: 6vw;
+  text-align: center;
+  padding: 7px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  &__selected {
+    padding: 8px;
+  }
+
+  &__options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--main-bg-color, $accent_red);
+    border: 1px solid $white_opaque_medium;
+    border-radius: 5px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+
+    & > .custom-select__option {
+      padding: 12px;
+      border-bottom: 1px solid $white_opaque_medium;
+      cursor: pointer;
+      text-align: center;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background-color: color.adjust($white_opaque_low, $lightness: 10%);
+      }
+    }
+  }
+}

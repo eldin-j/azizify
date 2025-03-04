@@ -1,0 +1,25 @@
+@use "../../assets/styles/colors" as *;
+
+.slider {
+    height: 40px;
+    border: 2px solid $white_opaque_high;
+    border-radius: 22px;
+
+    @media (max-width: 768px) {
+        height: 8vw;
+        border-radius: 4vw;
+    }
+}
+
+.thumb {
+    background-color: $white_opaque_high;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    @media (max-width: 768px) {
+        width: 8vw;
+        height: 8vw;
+    }
+}
