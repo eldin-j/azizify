@@ -8,6 +8,7 @@ import TimerSettingsContext from '../timer-settings/TimerSettingsContext';
 import './timer.scss';
 import '../../assets/styles/_variables.scss';
 
+// todo fix timer stops when settings opened
 const Timer = () => {
     const {
         workMinutes,
