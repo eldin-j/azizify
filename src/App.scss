@@ -1,0 +1,86 @@
+@use "./assets/styles/colors" as *;
+
+body {
+  background: var(--main-bg-color, $accent_red);
+  transition: background-color 0.5s ease;
+  color: var(--text_primary);
+}
+
+main {
+  padding-top: 50px;
+  max-width: 340px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+button {
+  background-color: transparent;
+  color: $text_secondary;
+  border: 0;
+  display: inline-block;
+  width: 100px;
+  min-height: 6vh;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+}
+
+button.with-text {
+  width: auto;
+  background-color: $black_opaque_low;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  line-height: 32px;
+}
+
+button.with-text svg {
+  width: 32px;
+  float: left;
+  margin-right: 6px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  color: $text_secondary;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 120px;
+  gap: 16vw;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.timer-container {
+  flex: 1;
+  min-width: 20vw;
+  margin-left: 15vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 85vh;
+}
+
+.tasklist-container {
+  flex: 1;
+  height: 85vh;
+}

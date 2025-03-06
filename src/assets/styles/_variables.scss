@@ -1,0 +1,6 @@
+@use "colors" as *;
+
+:root {
+  --accent-red: #{$accent_red};
+  --accent-green: #{$accent_green};
+}
