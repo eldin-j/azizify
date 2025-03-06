@@ -1,0 +1,42 @@
+@use "../../assets/styles/colors" as *;
+
+// Mode indicator
+.mode-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5vw;
+  font-size: 1.2rem;
+  color: $text_primary;
+  margin-bottom: 8%;
+
+  .active {
+    font-weight: bold;
+    background-color: $white_opaque_low;
+    color: $text_primary;
+  }
+}
+
+
+// Timer progress styles
+.timer-progress {
+  &.work,
+  &.break {
+    .CircularProgressbar\-trail {
+      stroke: $black_opaque_low;
+    }
+    .CircularProgressbar\-path {
+      stroke: $white_opaque_high;
+    }
+  }
+
+  .CircularProgressbar-text {
+    fill: $text_primary;
+    font-family: 'Bahnschrift', sans-serif;
+    font-size: 1.6rem;
+  }
+}
+
+.timer-controls {
+  margin-top: 4%;
+}
